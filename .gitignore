@@ -1,0 +1,11 @@
+processed_contacts.csv
+analyzer_analyzer_urls.csv
+analyzer_urls_without_marking.csv
+extraction.log
+
+api_gigachat/processed_contacts_with_results.csv
+api_gigachat/app.log
+
+.env
+
+.vscode/

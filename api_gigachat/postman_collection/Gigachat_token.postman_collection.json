@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "a70440f6-d374-4fc1-a73d-9618a839558d",
+		"name": "Gigachat_token",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40614196"
+	},
+	"item": [
+		{
+			"name": "GET_TOKEN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "RqUID",
+						"value": "{{$guid}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic {{base64_encoded_credentials}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "scope",
+							"value": "GIGACHAT_API_PERS",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://ngw.devices.sberbank.ru:9443/api/v2/oauth",
+					"protocol": "https",
+					"host": [
+						"ngw",
+						"devices",
+						"sberbank",
+						"ru"
+					],
+					"port": "9443",
+					"path": [
+						"api",
+						"v2",
+						"oauth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_MODELS",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://gigachat.devices.sberbank.ru/api/v1/models",
+					"protocol": "https",
+					"host": [
+						"gigachat",
+						"devices",
+						"sberbank",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"models"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
